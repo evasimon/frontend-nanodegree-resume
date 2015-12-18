@@ -1,8 +1,7 @@
 /*
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
+This file contains all of the code running in the background that makes resumeBuilder.js possible.
+We call these helper functions because they support your code in this course.
 
 Cameron Pittman
 */
@@ -12,58 +11,77 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderName = '<div class="col-sm-12 col-md-9 title"><h1 id="name">%data%</h1>';
+var HTMLheaderRole = '<span>%data%</span></div></div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="offwhite-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">mobile</span></li>';
+var HTMLemailAddress = '<li class="flex-item"><span class="white-text">%data%</span>';
+var HTMLemailType = '<span class="offwhite-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">twitter</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">github</span></li>';
+var HTMLlinkedin = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">linkedin</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">blog</span></li>';
+var HTMLportfolio = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">portfolio</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="white-text">%data%</span><span class="offwhite-text">location</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div><a href="index.html"><img src="%data%" class="biopic" alt="Photot of Eva Simon"></a>';
+var HTMLwelcomeMsg = '<p class="welcome-message custom-entry-wrapper">%data%</p>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<h3 id="skills-h3">Professional Skills</h3>';
+var HTMLskillName = '<span class="white-text">%data%</span>';
+var HTMLskillLevel = '<div class="progress"><div class="progress-bar" style="width: %data%;"><i class="fa fa-circle"></i></div></div>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkStart = '<div class="work-entry custom-entry-wrapper"></div>';
+var HTMLworkTitle = '<h3>%data% ';
+var HTMLworkEmployer = '<a href="#">@%data%</a></h3>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectStart = '<div class="project-entry card hoverable"></div>';
+var HTMLprojectTitle = '<span class="card-title"><a href="#">%data%</a></span></div>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectDescription = '<div class="card-content"><p><br>%data%</p></div><div class="card-action"><a>This is a link</a></div></div>';
+var HTMLprojectImage = '<div class="card-image"><div class="view overlay hm-white-slight z-depth-1"><img src="%data%" class="img-responsive" alt="Project Photo"><div class="mask waves-effect"></div>';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolStart = '<div class="education-entry custom-entry-wrapper"></div>';
+var HTMLschoolDegree = '<h3>%data% ';
+var HTMLschoolName = '<a href="#">@%data%</a></h3>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<p><br>Major: %data%</p>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineClasses = '<h3>Online Classes';
+var HTMLonlineTitle = '<h3>%data% ';
+var HTMLonlineSchool = '<a href="#">@%data%</a></h3>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<p><br><a href="#">%data%</a></p>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
+
 
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
-  $('button').click(function() {
+
+    function inName() {
+      var myNames = $('#name').html();
+
+      myNames = myNames.split(" ");
+
+      myNames[0] = myNames[0].slice(0,1).toUpperCase() + myNames[0].slice(1).toLowerCase()
+      myNames[1] = myNames[1].toUpperCase();
+
+      myNames = myNames.join(" ")
+
+      return myNames;
+    }
+
+    $('button').click(function() {
     var iName = inName() || function(){};
     $('#name').html(iName);  
   });
@@ -86,6 +104,10 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
 });
 
 
@@ -106,7 +128,8 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: true,
+    scrollwheel: false
   };
 
   /* 
@@ -140,7 +163,14 @@ function initializeMap() {
       locations.push(work.jobs[job].location);
     }
 
+    // iterates through travel locations and appends each location to
+    // the locations array
+    for (var trip in travel.trips) {
+      locations.push(travel.trips[trip].location);
+    }
+
     return locations;
+
   }
 
   /*
@@ -160,8 +190,20 @@ function initializeMap() {
     var marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
+      draggable: true,
+      animation: google.maps.Animation.DROP,
       title: name
     });
+
+    marker.addListener('click', toggleBounce);
+
+    function toggleBounce() {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
 
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
@@ -173,6 +215,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+        infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -183,6 +226,7 @@ function initializeMap() {
     // center the map
     map.setCenter(bounds.getCenter());
   }
+
 
   /*
   callback(results, status) makes sure the search returned results for a location.
@@ -230,16 +274,19 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
+  /*
+  Uncomment the code below when you're ready to implement a Google Map!
+  */
 
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+  // Calls the initializeMap() function when the page loads
 
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  window.addEventListener('load', initializeMap);
+
+  // Vanilla JS way to listen for resizing of the window
+  // and adjust map bounds
+
+  window.addEventListener('resize', function(e) {
+    
+  // Make sure the map bounds get updated on page resize
+  map.fitBounds(mapBounds);
+});
