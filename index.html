@@ -8,217 +8,238 @@ I can't wait to see the resumes you put together!
 
 Cameron Pittman, Udacity Course Developer
 -->
+
 <head>
-  <!-- This tells the browser how to read the document. -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+    <!-- This tells the browser how to read the document. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Eva Simon ~ Resume</title>
+    <!-- Tells the browser what the title of this page should be. -->
+    <title>Eva Simon ~ Resume</title>
 
-  <!-- Font Awesome CSS -->
+    <!-- Font Awesome CSS -->
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
 
-  <!-- Reset CSS -->
-  <link href="css/reset.css" rel="stylesheet">
+    <!-- Reset CSS -->
+    <link href="css/reset.css" rel="stylesheet">
 
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Load the page styles. -->
+    <link href="css/style.css" rel="stylesheet">
 
-  <!--  links our html to the polymer component -->
-  <link rel="import" href="elements/hello-udacity.html">
+    <!--  links our html to the polymer component -->
+    <link rel="import" href="elements/hello-udacity.html">
 
-  <script type="text/javascript" src="js/jQuery.js"></script>
-  <script type="text/javascript" src="js/helper.js"></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/helper.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
 </head>
+
 <body>
-  <!-- Web Components/Polymer -->
-  <hello-udacity></hello-udacity>
-  
-  <!-- Menu Section -->
-  <nav id="slideOut" class="nav">
-    <ul class="nav-list">
-      <li class="nav-item"><a href="#!">About Me</a></li>
-      <li class="nav-item"><a href="#!">Projects</a></li>
-      <li class="nav-item"><a href="#!">Resume</a></li>
-    </ul>
-  </nav> <!-- Menu Section Ends -->
+    <!-- Web Components/Polymer -->
+    <hello-udacity></hello-udacity>
 
-  <!-- Main Section -->
-  <div id="main" class="container">
-    <div class="row">
+    <!-- Menu Section -->
+    <nav id="slideOut" class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#!">About Me</a>
+            </li>
+            <li class="nav-item"><a href="#!">Projects</a>
+            </li>
+            <li class="nav-item"><a href="#!">Resume</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Menu Section Ends -->
 
-      <!-- Side Bar Section -->
-      <aside id="header" class="col-sm-12 col-md-4 z-depth-1">
-        <a id="menu" href="#">
-          <i class="material-icons custom-light-blue">menu</i>
-        </a>
+    <!-- Main Section -->
+    <div id="main" class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-12 sidebar-item">
-            <div class="col-sm-12 col-md-3 icon"> <!-- icon -->
-              <i class="fa fa-user"></i>
-            </div>
-            <div class="col-sm-12 col-md-9 info"> <!-- text -->
-              <div id="welcome">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 sidebar-item">
-            <div class="col-sm-12 col-md-3 icon"> <!-- icon -->
-              <i class="fa fa-phone"></i>
-            </div>
-            <div class="col-sm-12 col-md-9 info"> <!-- text -->
-              <ul class="mobile-box"></ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 sidebar-item">
-            <div class="col-sm-12 col-md-3 icon"> <!-- icon -->
-              <i class="fa fa-envelope"></i>
-            </div>
-            <div class="col-sm-12 col-md-9 info"> <!-- text -->
-              <ul class="email-box"></ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 sidebar-item">
-            <div class="col-sm-12 col-md-3 icon"> <!-- icon -->
-              <i class="fa fa-globe"></i>
-            </div>
-            <div class="col-sm-12 col-md-9 info"> <!-- text -->
-              <ul class="web-box"></ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 sidebar-item">
-            <div class="col-sm-12 col-md-3 icon"> <!-- icon -->
-              <i class="fa fa-users"></i>
-            </div>
-            <div class="col-sm-12 col-md-9 info"> <!-- text -->
-              <ul class="social-box"></ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 skill-line sidebar-item">
-            <div class="col-sm-12 col-md-3 icon"> <!-- icon -->
-              <i class="fa fa-calendar-o"></i>
-            </div>
-            <div class="col-sm-12 col-md-9 info last"> <!-- text -->
-              <div id="skills"></div>
-            </div>
-          </div>
-        </div>
-      </aside> <!-- Side Bar Section Ends -->
 
-      <!-- Card Section-->
-      <div class="col-sm-12 col-md-8 nopr">
-        <section class="card white">
-          <div class="row">
-            <div class="col-sm-12 col-md-2 section-icon">
-              <i class="fa fa-suitcase"></i>
+            <!-- Side Bar Section -->
+            <aside id="header" class="col-sm-12 col-md-4 z-depth-1">
+                <a id="menu" href="#">
+                    <i class="material-icons custom-light-blue">menu</i>
+                </a>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 sidebar-item">
+                        <div class="col-sm-12 col-md-3 icon">
+                            <!-- icon -->
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-9 info">
+                            <!-- text -->
+                            <div id="welcome">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 sidebar-item">
+                        <div class="col-sm-12 col-md-3 icon">
+                            <!-- icon -->
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-9 info">
+                            <!-- text -->
+                            <ul class="mobile-box"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 sidebar-item">
+                        <div class="col-sm-12 col-md-3 icon">
+                            <!-- icon -->
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-9 info">
+                            <!-- text -->
+                            <ul class="email-box"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 sidebar-item">
+                        <div class="col-sm-12 col-md-3 icon">
+                            <!-- icon -->
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-9 info">
+                            <!-- text -->
+                            <ul class="web-box"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 sidebar-item">
+                        <div class="col-sm-12 col-md-3 icon">
+                            <!-- icon -->
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-9 info">
+                            <!-- text -->
+                            <ul class="social-box"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 skill-line sidebar-item">
+                        <div class="col-sm-12 col-md-3 icon">
+                            <!-- icon -->
+                            <i class="fa fa-calendar-o"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-9 info last">
+                            <!-- text -->
+                            <div id="skills"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Side Bar Section Ends -->
+
+            <!-- Card Section-->
+            <div class="col-sm-12 col-md-8 nopr">
+                <section class="card white">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2 section-icon">
+                            <i class="fa fa-suitcase"></i>
+                        </div>
+                        <div id="workExperience" class="col-sm-12 col-md-10 card-content">
+                            <h2 class="card-title">Work Experience</h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="card white">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2 section-icon">
+                            <i class="fa fa-laptop"></i>
+                        </div>
+                        <div class="col-sm-12 col-md-10 card-content">
+                            <h2 class="card-title">Projects</h2>
+                            <div id="projects" class="col-sm-12 col-md-12"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="card white">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2 section-icon">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <div id="education" class="col-sm-12 col-md-10 card-content">
+                            <h2 class="card-title">Education</h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="card white">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2 section-icon">
+                            <i class="fa fa-plane"></i>
+                        </div>
+                        <div id="mapDiv" class="col-sm-12 col-md-10 card-content">
+                            <h2 class="card-title">Places I have Lived, Worked, Visited</h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="card custom-light-blue">
+                    <div class="row">
+                        <div id="lets-connect" class="col-sm-12 col-md-12">
+                            <h2 class="center-text card-title">Let's Connect</h2>
+                            <ul id="footerContacts" class="flex-box"></ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div id="workExperience" class="col-sm-12 col-md-10 card-content">
-              <h2 class="card-title">Work Experience</h2>
-            </div>
-          </div>
-        </section>
-        <section class="card white">
-          <div class="row">
-            <div class="col-sm-12 col-md-2 section-icon">
-              <i class="fa fa-laptop"></i>
-            </div>
-            <div class="col-sm-12 col-md-10 card-content">
-              <h2 class="card-title">Projects</h2>
-              <div id="projects" class="col-sm-12 col-md-12"></div>
-            </div>
-          </div>
-        </section>
-        <section class="card white">
-          <div class="row">
-            <div class="col-sm-12 col-md-2 section-icon">
-              <i class="fa fa-graduation-cap"></i>
-            </div>
-            <div id="education" class="col-sm-12 col-md-10 card-content">
-              <h2 class="card-title">Education</h2>
-            </div>
-          </div>
-        </section>
-        <section class="card white">
-          <div class="row">
-            <div class="col-sm-12 col-md-2 section-icon">
-              <i class="fa fa-plane"></i>
-            </div>
-            <div id="mapDiv" class="col-sm-12 col-md-10 card-content">
-              <h2 class="card-title">Places I have Lived, Worked, Visited</h2>
-            </div>
-          </div>
-        </section>
-        <section class="card custom-light-blue">
-          <div class="row">
-            <div id="lets-connect" class="col-sm-12 col-md-12">
-              <h2 class="center-text card-title">Let's Connect</h2>
-              <ul id="footerContacts" class="flex-box"></ul>
-            </div>
-          </div>
-        </section>
-      </div> <!-- Card Section Ends -->
+            <!-- Card Section Ends -->
+        </div>
     </div>
-  </div> <!-- Main Section Ends-->
+    <!-- Main Section Ends-->
 
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-  <!-- Material Design Bootstrap -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Material Design Bootstrap -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 
-  <!-- resumeBuilder.js builds the resume
+    <!-- resumeBuilder.js builds the resume
   dynamically
   -->
-  <script src="js/resumeBuilder.js"></script>
+    <script src="js/resumeBuilder.js"></script>
 
 
-  <!-- Checks for changes of each section of the resume -->
+    <!-- Checks for changes of each section of the resume -->
 
-  <script type="text/javascript">
-
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
-  <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('lets-connect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>

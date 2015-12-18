@@ -30,7 +30,7 @@ var HTMLwelcomeMsg = '<p class="welcome-message custom-entry-wrapper">%data%</p>
 
 var HTMLskillsStart = '<h3 id="skills-h3">Professional Skills</h3>';
 var HTMLskillName = '<span class="white-text">%data%</span>';
-var HTMLskillLevel = '<div class="progress"><div class="progress-bar" style="width: %data%;"><i class="fa fa-circle"></i></div></div>';
+// var HTMLskillLevel = '<div class="progress"><div class="progress-bar" style="width: %data%;"><i class="fa fa-circle"></i></div></div>';
 
 var HTMLworkStart = '<div class="work-entry custom-entry-wrapper"></div>';
 var HTMLworkTitle = '<h3>%data% ';

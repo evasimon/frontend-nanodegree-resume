@@ -1,341 +1,341 @@
 * {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #eae8e7;
-  color: #fff;
+    font-family: "Roboto", sans-serif;
+    background-color: #eae8e7;
+    color: #fff;
 }
 
 h1 {
-  font-weight: 500;
-  font-size: 29px;
-  line-height: 48px;
-  display: inline;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 48px;
+    display: inline;
 }
 
 h3 {
-  font-size: 16px;
-  color: #767270;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 10px 0;
+    font-size: 16px;
+    color: #767270;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 0;
 }
 
 p {
-  font-size: 10pt;
-  line-height: 17pt;
+    font-size: 10pt;
+    line-height: 17pt;
 }
 
 a {
-  color: #767270;
-  text-decoration: none;
-  display: inline-block;
+    color: #767270;
+    text-decoration: none;
+    display: inline-block;
 }
 
 a:hover {
-  color: #5da4d9;
+    color: #5da4d9;
 }
 
 span {
-  display: block;
+    display: block;
 }
 
-.container{
-  margin: 24px auto;
+.container {
+    margin: 24px auto;
 }
 
 .row {
-  margin: 0;
+    margin: 0;
 }
 
 .custom-light-blue {
-  background-color: #5da4d9;
+    background-color: #5da4d9;
 }
 
 
 /* Side Bar Section */
 
 #header {
-  background-color: #5da4d9;
-  padding: 0;
-  margin-bottom: 25px;
+    background-color: #5da4d9;
+    padding: 0;
+    margin-bottom: 25px;
 }
 
 #header .title {
-  position: absolute;
-  right: 9px;
-  top: 256px;
+    position: absolute;
+    right: 9px;
+    top: 256px;
 }
 
 .biopic {
-  width: 100%;
+    width: 100%;
 }
 
 .white-text {
-  font-size: 16px;
-  color: #fff;
-  line-height: 26px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 26px;
 }
 
 .offwhite-text {
-  font-size: 15px;
-  color: #fff;
-  font-weight: 300;
-  line-height: 22px;
-  opacity: 0.7;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 22px;
+    opacity: 0.7;
 }
 
 .flex-item {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .welcome-message {
-  font-size: 16px;
-  color: #f3f3f3;
-  font-weight: 300;
-  line-height: 22px;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #f3f3f3;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 20px;
 }
 
 #skills-h3 {
-  font-size: 18px;
-  color: #fff;
-  line-height: 32px;
-  font-weight: 500;
-  padding-top: 0;
+    font-size: 18px;
+    color: #fff;
+    line-height: 32px;
+    font-weight: 500;
+    padding-top: 0;
 }
 
 .skill-line h3 {
-  margin-top: 0px;
-  margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .skill-line span {
-  opacity: initial;
+    opacity: initial;
 }
 
 .progress {
-  position: relative;
-  background-color: #4783c2;
-  height: 2px;
-  overflow: visible;
+    position: relative;
+    background-color: #4783c2;
+    height: 2px;
+    overflow: visible;
 }
 
 .progress-bar {
-  position: absolute;
-  background-color: #ffffff;
+    position: absolute;
+    background-color: #ffffff;
 }
 
 .progress-bar .fa {
-  font-size: 12px;
-  position: absolute;
-  top: -5px;
-  right: 0px;
-  margin-left: 50%;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    margin-left: 50%;
 }
 
 .info {
-  margin: 20px 0;
-  border-bottom: 1px solid #4783c2;
-  padding-left: 0;
+    margin: 20px 0;
+    border-bottom: 1px solid #4783c2;
+    padding-left: 0;
 }
 
 .sidebar-item {
-  padding: 0;
+    padding: 0;
 }
 
 
 /* Hamburger Menu Section*/
 
 .nav {
-  width: 250px;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  z-index: 99999;
-  background-color: #fff;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 99999;
+    background-color: #fff;
   /* This trasform moves the menu bar off canvas. */
-  -webkit-transform: translate(-300px, 0);
-  transform: translate(-300%, 0);
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300%, 0);
   /* Optionally, we animate the menu bar. */
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 nav.open {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  transition: transform 0.3s ease;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    transition: transform 0.3s ease;
 }
 
 .nav-item {
-  display: block;
-  width: 100%;
-  padding: 20px 20px;
-} 
+    display: block;
+    width: 100%;
+    padding: 20px 20px;
+}
 
 .nav-item a {
-  color: #767270;
-  display: block;
-  font-size: 18px;
-  height: 55px;
-  line-height: 55px;
-  padding: 0 15px;
+    color: #767270;
+    display: block;
+    font-size: 18px;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 15px;
 }
 
 #mainOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 120vh;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 997;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 997;
 }
 
 
 /* Card Section - General Style */
 
 .card {
-  margin: 25px 5px;
+    margin: 25px 5px;
 }
 
 .card .card-title {
-  font-size: 32px;
-  color: #767270;
-  font-weight: 500;
-  padding: 10px 0;
+    font-size: 32px;
+    color: #767270;
+    font-weight: 500;
+    padding: 10px 0;
 }
 
 .card .card-content p {
-  color: #767270;
-  margin: 0 0 20px 0;
+    color: #767270;
+    margin: 0 0 20px 0;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0;
-  margin-bottom: 20px;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 .work-entry a,
-.education-entry a{
-  font-size: 13px;
+.education-entry a {
+    font-size: 13px;
 }
 
 .date-text,
 .location-text {
-  font-size: 13px;
-  color: #1199c3;
-  line-height: 17pt;
-  float: left;
-  text-transform: uppercase;
+    font-size: 13px;
+    color: #1199c3;
+    line-height: 17pt;
+    float: left;
+    text-transform: uppercase;
 }
 
 .location-text {
-  float: right;
+    float: right;
 }
 
 #map {
-  display: block;
-  height: 80%;
-  color: #000;
+    display: block;
+    height: 80%;
+    color: #000;
 }
 
 #mapDiv {
-  height: 600px;
-  padding-bottom: 5%;
+    height: 600px;
+    padding-bottom: 5%;
 }
 
 .custom-entry-wrapper {
-  border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
 }
 
 .custom-entry-wrapper:last-child,
 .info.last {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 
 /* Project Section */
 
 #projects {
-  padding: 0;
+    padding: 0;
 }
 
 .project-entry {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .project-entry .date-text {
-  padding: 20px 0 0 20px;
+    padding: 20px 0 0 20px;
 }
 
 
 /* Icon Section - Font Awesome */
 
-.icon{
-  text-align: center;
-  margin-top: 27px;
+.icon {
+    text-align: center;
+    margin-top: 27px;
 }
 
 .section-icon {
-  color: #767270;
-  text-align: center;
-  margin-top: 40px;
+    color: #767270;
+    text-align: center;
+    margin-top: 40px;
 }
 
 .fa {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 .fa-suitcase,
 .fa-graduation-cap,
 .fa-laptop,
 .fa-plane {
-  font-size: 44px;
+    font-size: 44px;
 }
 
 
 /* Material Icon Section */
 
 @font-face {
-  font-family: 'Material Icons';
+    font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v10/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
 }
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
 }
 
 .material-icons {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 2px 5px;
-  color: #fff;
-  font-size: 24px;
-  line-height: 26px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 2px 5px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 26px;
 }
 
 

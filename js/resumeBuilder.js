@@ -25,23 +25,10 @@ var bio = {
 			"address": "eva@evasimon.me"
 		}
 	],
-	"bioPic": "img/myimage2.jpg",
-	"welcomeMsg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. P",
-	"skills": [
-		{
-			"name": "HTML",
-			"level": "95%"
-		},
-		{
-			"name": "CSS",
-			"level": "90%"
-		},
-		{
-			"name": "Javascript",
-			"level": "60%"
-		}
-	],
-	"display": function() {
+	"biopic": "img/myimage2.jpg",
+	"welcomeMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. P",
+	"skills": ["HTML", "CSS", "Javascript"],
+	display: function() {
 
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -53,8 +40,8 @@ var bio = {
 		var formattedPortfolio = HTMLportfolio.replace("%data%", bio.contacts.portfolio);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-		var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+		var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
 		$("#header").prepend(formattedName);
 		$("#header").prepend(formattedBioPic);
@@ -88,11 +75,19 @@ var bio = {
 		if (bio.skills.length > 0) {
 			$("#skills").append(HTMLskillsStart);
 			for (skill in bio.skills){
-				var formattedSkillName = HTMLskillName.replace("%data%", bio.skills[skill].name);
-				var formattedSkillLevel = HTMLskillLevel.replace("%data%", bio.skills[skill].level);
-				$("#skills").append(formattedSkillName + formattedSkillLevel);
+				var formattedSkillName = HTMLskillName.replace("%data%", bio.skills[skill]);
+				$("#skills").append(formattedSkillName);
 			}
 		}
+
+		// if (bio.skills.length > 0) {
+		// 	$("#skills").append(HTMLskillsStart);
+		// 	for (skill in bio.skills){
+		// 		var formattedSkillName = HTMLskillName.replace("%data%", bio.skills[skill].name);
+		// 		var formattedSkillLevel = HTMLskillLevel.replace("%data%", bio.skills[skill].level);
+		// 		$("#skills").append(formattedSkillName + formattedSkillLevel);
+		// 	}
+		// }
 	}
 }
 
@@ -102,38 +97,41 @@ var education = {
 			"name": "MUN",
 			"location": "St. John's, Canada",
 			"degree": "Ph.D. Candidate",
-			"major": "Computational Chemistry",
-			"dates": "2005 - 2014"
+			"majors": "Computational Chemistry",
+			"dates": 2014,
+			"url": "mun.ca"
 		},
 		{
 			"name": "BBU",
 			"location": "Cluj-Napoca, Romania",
 			"degree": "M.Sc.",
-			"major": "Chemical Process Engineering",
-			"dates": 2005
+			"majors": "Chemical Process Engineering",
+			"dates": 2005,
+			"url": "mun.ca"
 		},
 		{
 			"name": "BBU",
 			"location": "Cluj-Napoca, Romania",
 			"degree": "B.Sc.",
-			"major": "Chemical Engineering",
-			"dates": 2004
+			"majors": "Chemical Engineering",
+			"dates": 2004,
+			"url": "mun.ca"
 		}
 	],
 	"onlineCourses": [
 		{
 			"title": "Front-End Nanodegree",
 			"school": "Udacity",
-			"dates": "OCT 2015 - Future",
+			"date": 2016,
 			"url": "www.udacity.com"
 		}
 	],
-	"display": function() {
+	display: function() {
 		for (onlineCourse in education.onlineCourses){
 
 			var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
 			var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].dates);
+			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
 			var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
 			// $("#education").append(HTMLonlineClasses);
 			$("#education").append(HTMLschoolStart);
@@ -150,7 +148,7 @@ var education = {
 			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);;
 			var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 
 			$("#education").append(HTMLschoolStart);
 			$(".education-entry:last").append(formattedSchoolDegree + formattedSchoolName);
@@ -186,7 +184,7 @@ var work = {
 			"description": "Conducted Research on..."
 		}
 	],
-	"display": function() {
+	display: function() {
 
 		for (job in work.jobs) {
 
@@ -210,24 +208,24 @@ var projects = {
 	"projects": [
 		{
 			"title": "Pulseband",
-			"dates": 2015,
+			"dates": "May 2015 - Jul 2015",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. P",
 			"images": ["img/pulseband-medium.jpg"]
 		},
 		{
 			"title": "Glass Coat Photo Booth",
-			"dates": 2015,
+			"dates": "May 2015 - Jul 2015",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. PLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. PLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. P",
 			"images": ["img/photobooth-medium.jpg"]
 		},		
 		{
 			"title": "Joinesty",
-			"dates": 2015,
+			"dates": "May 2015 - Jul 2015",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas ante sit amet congue dignissim. Fusce id sagittis arcu. Suspendisse nec blandit ipsum. P",
 			"images": ["img/joinesty-medium.jpg"]
 		}
 	],
-	"display": function() {
+	display: function() {
 		for (project in projects.projects) {
 
 			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
